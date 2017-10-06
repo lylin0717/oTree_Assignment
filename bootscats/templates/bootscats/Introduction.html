@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+{% block title %} Introduction {% endblock %}
+{% block content %} 
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Instructions
+    </h3>
+    <p>
+        You have been randomly and anonymously paired with another participant.
+        You need to type the corresponding output based on given number.
+        The requirement is as follows: <br />
+        1. if the number contains 3 or can be divided by 3, return boots<br />
+        2. if the number contains 5 or can be divided by 5, return cats<br />
+        3. if the number contains 3 and 5 or can be divided by 15, return bootscats<br />
+        4. otherwise return the number itself<br />
+        The number will start from {{Constants.start}}
+
+    </p>
+</div>
+
+{% next_button %} {% endblock %}

@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Bootscats Game
+{% endblock %}
+
+{% block content %}
+  <h4>Introduction:</h4>
+  <p>
+    This is a bootscats game.
+    If the number have 3 or can be divided by 3, type <strong>boots</strong>
+    If the number have 5 or can be divided by 5, type <strong>cats</strong>
+    If the number have 3 and 5 or can be divided by 3 and 5, type <strong>bootscats</strong>
+
+    The game will end when someone made a mistake. :)
+  </p>
+
+{% formfield player.start_number with label="Please choose a postive integer to start" %}
+
+{% next_button %}
+
+{% endblock %}

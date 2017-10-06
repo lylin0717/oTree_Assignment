@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Game Started!
+{% endblock %}
+
+{% block content %}
+    <h2>Round: {{subsession.round_number}}</h2>
+    <h4>Current number is {{group.cur_number}}</h4>
+
+    {% formfield group.answer with label="Please type the corresponding output" %}
+    {% next_button %}
+
+{% endblock %}

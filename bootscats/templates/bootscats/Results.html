@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Results!
+{% endblock %}
+
+{% block content %}
+{% if group.winner_id = player.id_in_group %}
+    <p>
+        You won!!
+    </p>
+    {% else %}
+    <p>
+        You made a mistake!
+    </p>
+
+{% endif %}
+
+{% endblock %}
